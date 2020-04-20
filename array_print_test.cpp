@@ -59,7 +59,7 @@ int main(void)
      return 0;
  }
 
-    char*my_strcpy(char*pd,char*ps) // 복사 받을 곳(pd)와 복사할 곳 (ps)의 포인터햐
+    char*my_strcpy(char*pd,char*ps) // 복사 받을 곳(pd)와 복사할 곳 (ps)의 포인터
     {
       char*po =pd;  // pd 값을 나중에 반환하기 위해 보관
 
@@ -112,4 +112,19 @@ void auto_func(void)
 
   a++;    // a 값 1증가
   printf("%d\n",a); // a 출력
+}
+#include <stdio.h>
+
+int main(void)
+{ 
+    register int i; //레지스터 변수
+    auto sum =0; //auto 지역 변수
+    
+    for(i=1; i<=10000; i++) //반복과정에서 i를 계속 사용
+    {
+        sum += i;    //i 값을 반복하여 누적
+    }
+    printf("%d\n",sum);
+
+    return 0;
 }
