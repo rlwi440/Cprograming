@@ -9,7 +9,7 @@ int main(void)
     printf("단어입력: ");
     scanf("%s",str);
     len=strlen(star);//입력한 단어의 길이 계산
-   if(len <= 6)  // 길이가 5 이하이면 그대로 복사
+   if(len <= 5)  // 길이가 5 이하이면 그대로 복사
    {
         strcpy(res_str,str);
     }
@@ -59,7 +59,7 @@ int main(void)
      return 0;
  }
 
-    char*my_strcpy(char*pd,char*ps) // 복사 받을 곳(pd)와 복사할 곳 (ps)의 포인터
+    char*my_strcpy(char*pd,char*ps) // 복사 받을 곳(pd)와 복사할 곳 (ps)의 포인터햐
     {
       char*po =pd;  // pd 값을 나중에 반환하기 위해 보관
 
@@ -73,3 +73,43 @@ int main(void)
 
         return po; // 복사가  끝난 저장 공간의 시작 주소 반환
     }
+
+#include <stdio.h>
+
+void auto_func(void);  // auto_func 함수선언
+void static_func(void); // static_func 함수선언
+
+int main(void)
+{
+    int i;
+
+    printf("일반 지역변수(auto)를 사용한 함수 ...\n");
+    for (i=0; i<3; i++)
+    {
+        auto_func();
+    }
+
+    printf("정적 지역 변수(static)를 사용한 함수...\n");
+    for (i=0; i<3; i++)
+    {
+        static_func();
+    }
+
+    return 0;
+}
+
+void auto_func(void)
+{
+  auto  a = 0; //지역변수 선언과 초기화 
+
+  a++; //a 값 1증가
+  printf("%d\n",a);  //a 출력
+}
+
+void auto_func(void)
+{
+  static int a;   // 정적 지역 변수 선언    
+
+  a++;    // a 값 1증가
+  printf("%d\n",a); // a 출력
+}
