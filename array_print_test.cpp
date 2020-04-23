@@ -43,76 +43,8 @@ int main(void)
     return 0;
 }
 
-#include<stdio.h>
 
-    char*my_strcpy(char*pd,char*ps); // 함수선언
 
-    int main(void)
- {
-     char str[80] ="strawberry";
-
-     printf("바꾸기 전 문자열: %s\n",str);
-     my_strcpy(str,"apple"); // 문자열 "apple" 복사
-     printf("바꾼 후 문자열 후:%s\n",str);
-     printf("다른 문자열 대입: %s\n",my_strcpy(str,"kiwi")); //반환값으로 출력
-
-     return 0;
- }
-
-    char*my_strcpy(char*pd,char*ps) // 복사 받을 곳(pd)와 복사할 곳 (ps)의 포인터
-    {
-      char*po =pd;  // pd 값을 나중에 반환하기 위해 보관
-
-     while (*ps !='\0') //ps가 가리키는 문자가 널 문자가 아닌 모양
-        {
-            *pd =*ps; // ps가 가리키는 문자를 pd가 가리키는 위치에 대입
-            pd++; //복사 받을 다음위치로  포인터 증가
-            ps++; //복사할 다음 문자의 위치로 포인터 증가
-        }
-        *pd='\0'; //복사가 모두 끝난 후 복사 받을 곳 에 널문자 로 마무리
-
-        return po; // 복사가  끝난 저장 공간의 시작 주소 반환
-    }
-
-#include <stdio.h>
-
-void auto_func(void);  // auto_func 함수선언
-void static_func(void); // static_func 함수선언
-
-int main(void)
-{
-    int i;
-
-    printf("일반 지역변수(auto)를 사용한 함수 ...\n");
-    for (i=0; i<3; i++)
-    {
-        auto_func();
-    }
-
-    printf("정적 지역 변수(static)를 사용한 함수...\n");
-    for (i=0; i<3; i++)
-    {
-        static_func();
-    }
-
-    return 0;
-}
-
-void auto_func(void)
-{
-  auto  a = 0; //지역변수 선언과 초기화 
-
-  a++; //a 값 1증가
-  printf("%d\n",a);  //a 출력
-}
-
-void auto_func(void)
-{
-  static int a;   // 정적 지역 변수 선언    
-
-  a++;    // a 값 1증가
-  printf("%d\n",a); // a 출력
-}
 #include <stdio.h>
 
 int main(void)
@@ -153,35 +85,3 @@ int *sum(int a, int b) // int형 변수의 주소를 반환하는 함수
 
 } 
 
-#include<stdio.h>
-
-int main(void)
-{
-    int score[3][4];  //3명의  네 과목 점수를 저장할 2차원 배열 선언
-    int total;   //총점
-    double  avg; // 평균
-    int i,j;
-
-    for(i=0; i<3; i++) // 학생 수만큼 반복
-{
-    printf("4과목 점수입력: ");//입력안내 메세지
-            for (j=0; j<4; j++)
-            {
-                scanf("%d" ,score[i][j]); //점수입력
-
-            }
-}
-
-    for(i=0; i<3; i++) // 학생 수만큼 반복
-    {
-        total =0; //학생이 바뀔 때마다 0으로 초기화
-        for(j=0; j<4; j++) //과목 수 만큼 반복
-        {
-            total += score[i][j];  //학생별로 총점 누적
-        }
-            avg  =total /4.0;   //평균 계산
-            printf("총점:%d,평균:%.2lf\n",total,avg); //총점 ,평균 출력
-        }
-
-            return 0;
-}
