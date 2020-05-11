@@ -23,7 +23,7 @@ int main(void)
 
     for(i=0; i<5; i++)
     {
-        printf("%10s%5d%15s%20s\n"), 배열 요소 수 만큼 반복
+        printf("%10s%5d%15s%20s\n"), //배열 요소 수 만큼 반복
         list[i].name,list[i].age,list[i].tel,list[i].addr);
     }
 
