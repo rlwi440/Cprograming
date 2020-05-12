@@ -22,4 +22,4 @@ int main(void)
         printf("나의 레저활동→%s\n",pc);         //선택된 문자열 출력
 
         return 0;
-}oi
+}
