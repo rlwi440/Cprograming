@@ -35,5 +35,5 @@ void auto_func(void)
   static int a;   // 정적 지역 변수 선언    
 
   a++;    // a 값 1증가
-  printf("%d\n",a); // a 출력
-}
+  printf("%d\n",a); // a 출력           
+}         //제목 재수정(2020년 05월 12일 )
