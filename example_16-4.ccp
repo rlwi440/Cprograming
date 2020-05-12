@@ -26,5 +26,5 @@ int main(void)
             free(str[i])                // 동적 할당 영역 변환
         }
 
-        return 0;
+        return 0;               //제목 재수정(2020년 05월 12일)
 }
