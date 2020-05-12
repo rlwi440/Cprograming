@@ -18,5 +18,5 @@ int main(void)
     printf("ppi%10u%10u%10u%10d\n",ppi,&ppi,*ppi);
     printf("------------------------------------------------/n");
 
-    return 0;
+    return 0;           //제목 재수정(2020년 05월 12일 )
 }
