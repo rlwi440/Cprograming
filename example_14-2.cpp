@@ -16,10 +16,9 @@ int main(void)
     {
         for (j = 0; j < 4; j++)
         {
-            printf("%5d", num[i][j];) //배열의 요소 출력
-        }
-        printf("\n") //한 행을 출력한후에  줄바꿈
-    }
+            printf("%5d", num[i][j]); //배열의 요소 출력
+        };
+        printf("\n"); //한 행을 출력한후에  줄바꿈
 
-    return 0;
-}
+        return 0;
+    }
