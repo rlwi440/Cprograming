@@ -9,7 +9,7 @@ int main(void)
 
     printf("pa-> %s,pb →%s\n", pa, pb); // 바꾸기 전에 문자열 출력
     swap_ptr(&pa, &pb);
-    printf("pa-> %s,pb -> %s\n", pa, pb); //g바꾼 후에 문자열 출력
+    printf("pa-> %s,pb -> %s\n", pa, pb); //바꾼 후에 문자열 출력
 
     return 0;
 }
