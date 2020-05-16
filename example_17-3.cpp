@@ -25,7 +25,7 @@ int main(void)
     printf("나이 : %d\n", yuni.pf.age);      //pf 멤버의 age 멤버 출력
     printf(" 키 : %.1lf\n", yuni.pf.height); //pf 멤버의 height 멤버 출력
     printf(" 학번: %d\n", yuni.id);          //id 멤버 출력
-    printf("학점 :%.1lf\n", yuni.grade);     //gtade 멤버 출력  (test)
+    printf("학점 :%.1lf\n", yuni.grade);     //gtade 멤버 출력
 
     return 0;
 }
