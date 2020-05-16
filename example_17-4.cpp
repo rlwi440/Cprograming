@@ -25,5 +25,5 @@ int main(void)
     printf("이름 :%s\n", max.name);     //최고 학점 학생으 이름 출력
     printf("학점 :%.1lf\n", max.grade); //최고 학점 학생의 학점 출력
 
-    return 0; // 제목 재수정(2020년 05월 12일 )
+    return 0;
 }
