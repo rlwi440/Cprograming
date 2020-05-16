@@ -18,7 +18,7 @@ int main(void)
     *pd = 3.4; //포인터로 동적 할당  영역 사용
 
     printf(" 정수형으로 사용: %d\n", *pi);
-    printf(" 실수형으로 사용: %.1lf\n", *pd); //(test)
+    printf(" 실수형으로 사용: %.1lf\n", *pd);
 
     free(pi);
     free(pd);
