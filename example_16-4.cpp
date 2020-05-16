@@ -23,7 +23,7 @@ int main(void)
 
     for (i = 0; i < 3; i++)
     {
-        free(str[i]); // 동적 할당 영역 변환(test)
+        free(str[i]); // 동적 할당 영역 변환
     }
 
     return 0;
