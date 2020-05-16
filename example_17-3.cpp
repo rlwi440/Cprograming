@@ -1,10 +1,11 @@
 #include <stdio.h>
 
-struct profile //신상명세 구조체  선언
+struct profile //신상명세 구조체 선언
 {
-    int age;
-    double height;
+    int age;       //나이
+    double height; //키
 };
+
 struct student
 {
     struct profile pf; //profile 구조체 를 멤버로 사용 pf(profile)
