@@ -30,7 +30,7 @@ void print_list(struct address *lp)
 
     for (i = 0; i < 5; i++)
     {
-        printf("%10s%5d%15s%20s\n",                                           //각 배열 요소의 멤버 출력
-               (lp + i)->name, (lp + i)->age, (lp + i)->tel, (lp + i)->addr); //test
+        printf("%10s%5d%15s%20s\n", //각 배열 요소의 멤버 출력
+               (lp + i)->name, (lp + i)->age, (lp + i)->tel, (lp + i)->addr);
     }
 }
