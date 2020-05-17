@@ -85,4 +85,5 @@ void print_line(void)
     {
         printf(" -");
     }
-    printf("\n"); //(test)
+    printf("\n");
+}
