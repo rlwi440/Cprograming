@@ -33,10 +33,9 @@ int main(void)
     int step, i;
     char temp_str[max_length];
     char str_list[max_count][max_length] = {
-        "타이슨 , 2002년 09월 01일, 윤년, 외국,남자, 유치원교육과\n",
-        "빅토리아 , 2000년 03월 17일, 윤년, 외국,여자, 경영학과\n",
         "배기원 , 1997년 10월 01일, 윤년아님, 대한민국,남자, 컴퓨터과학과\n",
-    };
+        "빅토리아 , 2000년 03월 17일, 윤년, 외국,여자, 경영학과\n",
+        "타이슨 , 2002년 09월 01일, 윤년, 외국,남자, 유치원교육과\n"};
 
     for (i = 0; i < max_count; i++)
         printf("%s\n", str_list[i]);
@@ -65,13 +64,7 @@ void strcpy_s(void)
         {
             if (data[j] < data[indexMIN]) //data [j] 오름차순(작은수->큰수) ,indexmin (최솟값)
                 indexMIN = i;
-            for (int j = i + 1; j < count; j++)
-            {
-                if (data[j] < data[indexMIN])
-                {
-                    indexMIN = j;
-                }
-            }
+
             temp = data[indexMIN];
             data[indexMIN] = data[i];
             data[i] = temp; // for문 의 반복으로 가장 작은값을 찾으면 순서를 바꾼다.
