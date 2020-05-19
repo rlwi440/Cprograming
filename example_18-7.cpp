@@ -30,7 +30,7 @@ int main(void)
                 {
                     break;
                 }
-                printf("%s", str); //읽은 과일 이름을 화면 출력
+                printf("%s", str); //읽은 과일 이름을 화면출력
             }
         }
         else
