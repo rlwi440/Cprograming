@@ -49,7 +49,7 @@ int main(void)
 
     for (i = 0; i <= 9; i++)
     { //100점 미만
-        printf("%3d~%3d :", i * 10 * 10 + 9);
+        printf("%3d~%3d :", i * 10, i * 10 + 9);
         for (j = 0; j < dist[i]; j++)
             putchar('*');
         putchar('\n');
