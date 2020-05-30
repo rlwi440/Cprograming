@@ -8,4 +8,4 @@ int main(void)
     printf("\n 그럼 이만 잘부탁드립니다 \n");
 
     return 0;
-}
+} //test
