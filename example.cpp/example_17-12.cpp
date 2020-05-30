@@ -21,4 +21,4 @@ void print_data(student *ps)
 {
     printf("학번 : %d\n", ps->num); //student 포인터로 멤버접근
     printf("학점 : %.1lf\n", ps->grade);
-}
+} //제목 재수정(2020년 05월 31일),혼자 공부하는 c언어 파일 모음집
