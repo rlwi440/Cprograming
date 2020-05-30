@@ -28,4 +28,4 @@ int main(void)
     printf("학점 :%.1lf\n", yuni.grade);     //gtade 멤버 출력
 
     return 0;
-}
+} //제목 재수정(2020년 05월 31일),혼자 공부하는 c언어 파일 모음집
