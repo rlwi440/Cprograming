@@ -3,7 +3,7 @@
  * @param int a,b,c 4행 3열 을 정수값으로 대입할정보
  * @return for a,b[] []  행렬의곱을 c로대입후 처리결과를 int return 합니다.
  * 
- *@description 4행 3열의 행렬과 3행 4열의 행렬의 곱을 구하는 프로그램     
+ *@description 4행 3열의 행렬과 3행 4열의 행렬의 곱을 구하는 프로그램입니다.     
  *  
  * @version 0.28.1
  * @author 깔끔한 청년
