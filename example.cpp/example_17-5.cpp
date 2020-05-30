@@ -29,4 +29,4 @@ struct vision exchange(struct vision robot) //구조체 를 반환하는 함수
     robot.right = temp;
 
     return robot; //구조체 변수 반환
-}
+} //제목 재수정(2020년 05월 31일),혼자 공부하는 c언어 파일 모음집
