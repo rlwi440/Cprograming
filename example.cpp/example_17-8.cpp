@@ -33,4 +33,4 @@ void print_list(struct address *lp)
         printf("%10s%5d%15s%20s\n", //각 배열 요소의 멤버 출력
                (lp + i)->name, (lp + i)->age, (lp + i)->tel, (lp + i)->addr);
     }
-}
+} //제목 재수정(2020년 05월 31일),혼자 공부하는 c언어 파일 모음집
