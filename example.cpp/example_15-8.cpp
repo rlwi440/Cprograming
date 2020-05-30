@@ -58,4 +58,4 @@ int max(int a, int b) // 큰값을 구하는 함수
         return a;
     else
         return b;
-}
+} //제목 재수정(2020년 05월 31일),혼자 공부하는 c언어 파일 모음집
