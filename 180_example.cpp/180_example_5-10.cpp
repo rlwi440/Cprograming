@@ -35,7 +35,7 @@ int main(void)
     {
         for (j = 0; j < 4; j++)
         {
-            printf("b[%b][%d]: ", i, j);
+            printf("b[%d][%d]: ", i, j);
             scanf("%d", &b[i][j]);
         }
     }
