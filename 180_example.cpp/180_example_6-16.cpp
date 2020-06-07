@@ -3,7 +3,7 @@
  * @param int mx[4][3],my[3][4],mz[4][4]
  * @return mat_mul
  * 
- * @description example multiply processions
+ * @description example multidimnesional array
  * 
  * @version 0.28.2
  * @author 깔끔한 청년
