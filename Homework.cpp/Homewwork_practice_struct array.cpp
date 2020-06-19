@@ -29,7 +29,7 @@ void main()
         printf("Enter last name : ");
         scanf("%s", list[i].lname);
         printf("Enter phone number : ");
-        scanf("%s", list[i].fname);
+        scanf("%s", list[i].phone);
         printf("\n");
     }
     printf("\n");
