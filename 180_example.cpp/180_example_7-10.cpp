@@ -68,12 +68,12 @@ int main(void)
 
     printf("\nx         =");
     print_bits(x);
-    printf("\nset (x,pos)   = ");
-    print_bits(set(x, pos));
-    printf("\nreset (x,pos)   = ");
-    print_bits(reset(x, pos));
-    printf("\ninverse (x,pos)   = ");
-    print_bits(inverse(x, pos));
+    printf("\nset_n (x,pos,n)   = ");
+    print_bits(set_n(x, pos, n));
+    printf("\nreset_n (x,pos,n)   = ");
+    print_bits(reset_n(x, pos, n));
+    printf("\ninverse_n (x,pos,n)   = ");
+    print_bits(inverse_n(x, pos, n));
     putchar('\n');
 
     return 0;
