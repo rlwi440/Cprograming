@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <title>스웨이드 로퍼(swade lofa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        font-family: 'Nanum Pen Script', cursive;
+    }
+
+    .Ryan {
+        width: 700px;
+        height: 500px;
+
+        background-image: url("https://m.allthumb.co.kr/web/product/big/201904/04a0425dece13e10326a9e4d1ccd2aab.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .font {
+        font-size: 40px;
+    }
+
+    .text {
+        font-size: 30px;
+        color: green;
+    }
+
+    .btn-order {
+        margin: auto;
+        width: 100px;
+        display: block;
+    }
+
+    .wrap {
+        width: 600px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .clean {
+        color: blue;
+    }
+
+    .table {
+        margin: auto;
+        width: 500px;
+    }
+</style>
+
+<script>
+    function order() {
+        alert("로퍼를 구매해주셔서 감사합니다.")
+    }
+
+    $(document).ready(function () {
+        get_rate();
+        listing();
+    });
+
+    function listing() {
+        $.ajax({
+            type: "GET",
+            url: "/order",
+            data: {},
+            success: function (response) {
+                if (response["result"] == "success") {
+                    let orders = response['orders'];
+                    for (let i = 0; i < orders.length; i++) {
+                        let name = orders[i]['name'];
+                        let item = orders[i]['item'];
+                        let address = orders[i]['address'];
+                        let phone = orders[i]['phone'];
+
+                        let tmep_html = `<tr>
+                                        <th scope="row">$(name)</th>
+                                        <td>$(item)</td>
+                                        <td>$(address)</td>
+                                        <td>$(phone)</td>
+                                    </tr>`
+                        $('#order-box').append(tmep_html)
+                    }
+                }
+            }
+        })
+    }
+
+
+    function get_rate() {
+        $.ajax({
+            type: "GET",
+            url: "https://api.manana.kr/exchange/rate.json",
+            data: {},
+            success: function (response) {
+                console.log(response)
+            }
+        })
+    }
+
+    function order() {
+        let name = $('#order-name').val();
+        let item = $('#order-item').val();
+        let address = $('#order-address').val();
+        let phone = $('#order-phone').val();
+
+        $.ajax({
+            type: "POST",
+            url: "/order",
+            data: { name_give: name, item_give: item, address_give: address, phone_give: phone },
+            success: function (response) {
+                if (response["result"] == "success") {
+                    alert(response["msg"]);
+                    window.location.reload();
+                }
+            }
+        })
+    }
+</script>
+
+<body>
+    <div class="wrap">
+        <div class="Ryan"></div>
+        <div class="loopy">
+            <h1>스웨이드 로퍼<span class="font">가격 100,000원/개</span></h1>
+            <p class="text"> 스웨이드 로퍼는 너무예쁩니다.</p>
+            <p class="clean">달러-원 환율:<span id="now_rate">1219.15</span></p>
+
+        </div>
+        <div class="name">
+            <div class="input-group-prepend">
+                <span class="input-group-text">주문자 이름</span>
+            </div>
+            <input id="order-name" type="text" class="form-control" aria-label="Default"
+                aria-describedby="inputGroup-sizing-default">
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">수량</label>
+            </div>
+            <select id="order-item" class="custom-select" id="inputGroupSelect01">
+                <option selected>수량을 선택하세요</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">주소</span>
+            </div>
+            <input id="order-address" type="text" class="form-control" aria-label="Default"
+                aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">전화번호</span>
+            </div>
+            <input id="order-phone" type="text" class="form-control" aria-label="Default"
+                aria-describedby="inputGroup-sizing-default">
+        </div>
+        <button type="button" onclick="order()" class="btn btn-primary btn-order">주문하기</button>
+
+    </div>
+
+</body>
+
+
+</html>
