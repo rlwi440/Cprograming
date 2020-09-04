@@ -9,13 +9,23 @@
 
 <body>
     <script>
-        var average = (1, 200 + 1, 300 + 1, 000) / 3; //평균값 구하기
-        var foruth = prompt("4분기를 입력하세요.", "")
-        var msg_1 = ("판매량이 평균이상입니다.");
-        var msg_2 = ("판매량이 평균미달입니다.");
+        var site = prompt("네이버,다음,네이트 ,구글중\ 즐겨사용하는 포털 검색사이트는?", "");   // \와 함께 코드를 작성하면 문자열의 줄을 바꿔도 오류가 발생하지 않는다.
+        var url;
 
-        var result = foruth >= average ? msg_1 : msg_2;
-        document.write(result);
+        switch (site) {
+            case "구글": url = "www.google.co.kr";
+                break;
+            case "다음": url = "www.daum.net";
+                break;
+            case "네이버": url = "www.naver.com";
+                break;
+            case "네이트": url = "www.nate.com";
+                break;
+
+            default: alert("보기중에 없는사이트입니다.");
+        }
+
+        if (url) location.href = "http://" + url;            // url 저장된 주소로 이동합니다.
     </script>
 </body>
 
