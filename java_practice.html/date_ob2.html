@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var today = new Date();
+        var nowYear = today.getFullYear();
+
+        var theDate = new Date(nowYear, 11, 30);
+        var diffDate = theDate.getTime() - today.getTime();
+
+        var result = Math.ceil(diffDate / (60 * 1000 * 60 * 24));       //Math,ceil( ) 함수는 주어진 숫자보다 크거나 같은 숫자중 가장 작은숫자를 integer로 반환합니다.
+        document.write("연말 D-day :", result + "일 남았습니다.");
+    </script>
+</body>
+
+</html>
