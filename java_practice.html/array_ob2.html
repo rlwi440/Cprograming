@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr_1 = ["사당", "교대", "방배", "강남"];
+        var arr_2 = ["신사", "압구정", "옥수"];
+
+        var result = arr_1.join("-");     //  .joim:배열객체의 데이터를 연결문자기준으로 1개 문자형 데이터로 반환
+        console.log(result);
+
+        result = arr_1.concat(arr_2);     // concat: 2개의 배열객체 하나로 결합
+        console.log(result);
+
+        result = arr_1.slice(1, 3);    //slice :배열객체의 데이터중 원하는인덱스 구간만큼 잘라서 배열객체로 가져오다.
+        console.log(result);
+
+        arr_1.sort();
+        console.log(arr_1);
+
+        arr_2.reverse();        //reverse:순서 거꾸로 반환.
+        console.log(arr_2);
+    </script>
+</body>
+
+</html>
