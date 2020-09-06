@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var greenArr = ["교대", "방배", "강남"];
+        var yellowArr = ["미금", "정자", "수서"];
+
+        greenArr.splice(2, 1, "서초", "역삼");
+        console.log(greenArr);
+
+        var data1 = yellowArr.pop();
+        var data2 = yellowArr.shift();
+
+        yellowArr.push(data2);      //마지막 인덱스에 밀어 넣습니다.
+        console.log(yellowArr);
+
+        yellowArr.shift(data1);     //가장 앞쪽 인덱스에 밀어 넣습니다.
+        console.log(yellowArr);  //test
+    </script>
+
+</body>
+
+</html>
