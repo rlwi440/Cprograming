@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var addNum = 0;
+        var subNum = 1000;
+
+        var auto_1 = setInterval(function () {  //setInteraval :지속적으로 일정한 시간 간격으로 함수를 호출하여 코드를실해합니다
+            addNum++;               //증가정지
+            console.log("addNum: " + addNum);
+        }, 3000);
+
+        var auto_2 = setInterval(function () {
+            subNum--;               //감소정지
+            console.log("subNum: " + subNum);
+        }, 3000);
+    </script>
+</head>
+
+<body>
+    <h1>일정시간 간격으로 값증감시키기</h1>
+    <h5>콘솔패널을 확인하세요</h5>
+    <button onclick="clearInterval(auto_1)">증가정지</button>
+    <button onclick="clearInterval(auto_2)">감소정지</button>
+</body>
+
+</html>
