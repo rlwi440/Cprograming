@@ -11,11 +11,11 @@
     <script>
         var userName = prompt("당신이 영문의 이름?", "");
 
-        var upperName = userName.toUpperCase();     //toUppercase :영문 소문자를 모두 대문자로 바꿉니다.
+        var lowerName = userName.tolowerCase(); //toUppercase :영문 소문자를 모두 대문자로 바꿉니다.
         document.write(upperName, "<br>");
 
         var userNum = prompt("당신의 연락처는?");
-        var result = userNum.substring(0, userNum.length - 4) + "****";  //substring (a,b) a 인덱스부터 b 인덱스 이전 구간의문자를 반환합니다.
+        var result = userNum.substring(0, userNum.length - 4) + "****"; //substring (a,b) a 인덱스부터 b 인덱스 이전 구간의문자를 반환합니다.
         document.write(result, "<br>")
 
         var useremail = prompt("당신의 이메일 주소는?", "");
@@ -24,7 +24,9 @@
         var check1 = false;
         var check2 = false;
 
-        if (useremail.indexOf("@") > 0) { check1 = true; }         //index Of 찾을문자 
+        if (useremail.indexOf("@") > 0) {
+            check1 = true;
+        } //index Of 찾을문자 
 
         for (var i = 0; i < arrUrl.length; i++) {
             if (useremail.indexOf(arrUrl[i] > 0)) {
