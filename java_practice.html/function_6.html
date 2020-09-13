@@ -31,6 +31,8 @@
                 num--; //1만큼 감소
             }
 
+
+
             var imgTag = document.getElementById("photo");
             imgTag.setAttribute("src", "images/pic_" + num + ".jpg");
         }
@@ -39,7 +41,7 @@
 
 <body>
     <div id="galleryzone">
-        <p img src="" id="photo" alt=""></p>
+        <p><img src="images/pic_1.jpg" id="photo" alt=""></p>
         <p>
             <button onclick="gallery(0)">이전</button>
             <button onclick="gallery(1)">다음</button>
