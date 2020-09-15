@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이전/다음 요소 선택자</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            var style_1 = {
+                "background-color": "#0ff",
+                "bordder": "2px dashed #f00"
+            }
+            var style_2 = {
+                "background-color": "#ff0",
+                "bordder": "2px dashed #f00"
+            }
+
+            $(".txt").prev()
+                .css(style_1);
+
+            $(".txt +p").css(style_2);
+
+            $(".txt").next().next()
+                .css(style_2);
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>인접관계 선택자</h1>
+        <p>내용 1</p>
+        <p class="txt">내용 2</p>
+        <p>내용 3</p>
+        <p>내용 4</p>
+    </div>
+</body>
+
+</html>
