@@ -7,17 +7,25 @@
     <script src="js/jquery.js"></script>
     <script>
         $(function () {
-            $("*").css("bordor", "1px solid blue"); //("*")  전체선택자 , 두께가 1px인 파란색 실선을 생성합니다.
-            $("#title").css("color", "auqa");
-
+            $("#list_1").parent()
+                .css("border", "2px dashed #f00");
         });
     </script>
 </head>
 
 <body>
-    <h1 id="title">제이쿼리</h1>
-    <h2>선택자</h2>
-    <h3>직접 선택자</h3>
+    <h1>인접 관계선택자</h1>
+    <ul id="wrap">
+        <li>리스트
+            <ul>
+                <li id="list_1">리스트 1-1</li>
+                <li>리스트1-2</li>
+            </ul>
+        </li>
+        <li>리스트 2</li>
+        <li>리스트 3</li>
+    </ul>
+
 </body>
 
 </html>
