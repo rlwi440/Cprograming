@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selctor</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            var arr1 = [{
+                "area": "서울",
+                "name": "배대리"
+            }, {
+                "area": "부산",
+                "name": "배과장"
+            }, {
+                "area": "대전",
+                "name": "배사장"
+            }, {
+                "area": "서울",
+                "name": "빅마마"
+            }]
+
+            var arr2 = $.map(arr1, function (a, b) {
+                if (a.area == "서울") {
+                    return a;
+                }
+            });
+            console.log(arr2);
+            console.log("====first End =====")
+
+            var arr3 = $.grep(arr1, function (a, b) {
+                if (a.area == "서울") {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+            console.log(arr3);
+            console.log("====second End =====");
+        });
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
