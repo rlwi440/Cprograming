@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            var arr1 = ["서울", "부산", "대전", "전주"];
+            var arr2 = ["한국", "미국", "일본", "중국"];
+            var obj = {
+                "name": "정부장",
+                "area": "서울"
+            }
+
+            var idxNum = $.inArray("부산", arr1);
+            console.log(idxNum);
+
+            var okArray1 = $.inArray(arr1);
+            var okArray2 = $.inArray(obj);
+            console.log(okArray1);
+            console.log(okArray2);
+
+            $.merge(arr2, arr1);
+            console.log(arr2);
+        });
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
