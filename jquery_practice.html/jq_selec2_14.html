@@ -9,19 +9,19 @@
     <script src="js/jquery.js"></script>
     <script>
         $(function () {
-            $("#inner_1").find(".txt1")
+            $("#inner_1").find(".txt1") //find("하위요소중 필터링할 요소선택")
                 .css({
                     "background-color": "#ff0"
                 });
 
-            $("#inner_1 p").filter(".txt2")
+            $("#inner_1 p").filter(".txt2") // filter ("선택한 요소중 필터링한 요소선택")
                 .css({
                     "background-color": "#0ff"
                 });
 
             $("#inner_2 p").filter(function (idx, obj) {
                     console.log(idx);
-                    return idx % 2 == 0;
+                    return idx % 2 == 0; //id값이 "inner_2" 이며  하위 요소인<p>의 개수만큼 익명함수가 실행 
                 })
                 .css({
                     "background-color": "#0f0"
