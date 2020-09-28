@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            var result_1 = $("#user_name").val();
+            console.log(result_1); //배대리
+
+            $("user_id").val("javascript");
+
+            var result_2 = $("#user_id").prop("defalutvalue");
+            console.log(result_2); //hello            
+        })
+    </script>
+</head>
+
+<body>
+    <h1>객체 조작 및 생성</h1>
+    <form action="#" id="form_1">
+        <p>
+            <label for="user_name">이름</label><input type="text" name="user_name" id="user_name" value="배대리">
+        </p>
+        <p>
+            <label for="user_id">아이디</label><input type="text" name="user_id" id="user_id" value="hello">
+        </p>
+    </form>
+</body>
+
+</html>
