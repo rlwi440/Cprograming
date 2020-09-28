@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 연습</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $("#p1").addClass("aqua");
+            $("#p2").removeClass("red");
+            $("#p3").toggleClass("green");
+            $("#p4").toggleClass("green");
+            $("#p6").text($("#p5").hasClass("yellow"));
+        });
+    </script>
+    <style>
+        .aqua {
+            background-color: aqua;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <P id="p1">내용1</P>
+    <P id="p2" class="red">내용2</P>
+    <P id="p3">내용3</P>
+    <P id="p4" class="green">내용4</P>
+    <P id="p5" class="yellow">내용5</P>
+    <P id="p6"></P>
+
+</body>
+
+</html>
