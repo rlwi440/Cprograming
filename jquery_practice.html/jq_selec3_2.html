@@ -9,11 +9,11 @@
     <script src="js/jquery.js"></script>
     <script>
         $(function () {
-            $("#p1").addClass("aqua");
-            $("#p2").removeClass("red");
-            $("#p3").toggleClass("green");
+            $("#p1").addClass("aqua"); //생성
+            $("#p2").removeClass("red"); //삭제
+            $("#p3").toggleClass("green"); //class 값이 있으면 삭제,없으면 생성
             $("#p4").toggleClass("green");
-            $("#p6").text($("#p5").hasClass("yellow"));
+            $("#p6").text($("#p5").hasClass("yellow")); //true,없으면 false를 반환합니다.
         });
     </script>
     <style>
