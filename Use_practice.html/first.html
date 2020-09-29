@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"> </script>
+
+    <title>Long sleeve knit </title>
+    <script>
+        $(function () {
+            $("#green").css("color", "blue");
+            $("#yellow").css("color", "red");
+        });
+        var knit = $("#knit:selected").val();
+    </script>
+</head>
+
+<body>
+    <p>
+        <img src="C:\Users\rlwi4\Desktop\Alone_review\object_1.jpg" usemap="#intro" alt="초록색 니트">
+        <h1 id="green">파랑색 니트를보여드립니다. </h1>
+        <h3 id="yellow"> 가격은 50,000원 </h3>
+    </p>
+    </div>
+    <div class="name">
+        <div class="input-group-prepend">
+            <span class="input-group-text">주문자 이름</span>
+        </div>
+        <input id="order-name" type="text" class="form-control" aria-label="Default"
+            aria-describedby="inputGroup-sizing-default">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">수량</label>
+        </div>
+        <select id="order-item" class="custom-select" id="inputGroupSelect01">
+            <option selected>수량을 선택하세요</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">주소</span>
+        </div>
+        <input id="order-address" type="text" class="form-control" aria-label="Default"
+            aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">전화번호</span>
+        </div>
+        <input id="order-phone" type="text" class="form-control" aria-label="Default"
+            aria-describedby="inputGroup-sizing-default">
+    </div>
+    <button type="button" onclick="order()" class="btn btn-primary btn-order">주문하기</button>
+
+    </div>
+
+</body>
+
+</html>
