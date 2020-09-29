@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $("strong").unwrap();
+            $(".ct1").wrap("<div/>"); //새요소 로 각각 감쌉니다.
+            $(".ct2").wrapAll("<div/>"); //선택한요소를 한꺼번에 새 요소로 감쌉니다.
+            $("li").wrapInner("<h3 />")
+        });
+    </script>
+    <style>
+        div {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="tit_1">
+        <strong>객체 조작및 생성</strong>
+    </h1>
+    <p class="ct1">내용1</p>
+    <p class="ct1">내용2</p>
+    <p class="ct2">내용3</p>
+    <p class="ct2">내용4</p>
+    <ul>
+        <li>내용 3</li>
+        <li>내용 4</li>
+    </ul>
+</body>
+
+</html>
