@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(document).ready(function () {
+                var h1 = $(".img1").height();
+                console.log("ready :", h1);
+
+            });
+            $(document).load(function () {
+                var h2 = $(".img1").height();
+                console.log("load :", h2);
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <P>
+        <img src="http://place-hold.it/300x300" class="img1">
+    </P>
+</body>
+
+</html>
