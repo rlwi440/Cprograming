@@ -7,13 +7,19 @@
     <script src="js/jquery.js"> </script>
     <script>
         $(function () {
-            $("#title").css("color", "red");
+            $("#myList li").not(":first")
+                .css("background-color", "yellow");
         });
     </script>
 </head>
 
 <body>
-    <h1 id="title">TEST</h1>
+    <ul id="my List">
+        <li>내용 1</li>
+        <li>내용 2</li>
+        <li>내용 3</li>
+        <li>내용 4</li>
+    </ul>
 </body>
 
 </html>
