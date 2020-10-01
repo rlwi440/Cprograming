@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll()</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(window).on("scroll", function () {
+            var sc_top = $(this).scrollTop(); //이벤트 대상인 브라우저(window)의 수직,수평스크롤바가 이동한 만큼의 값을 출력합니다.
+            var sc_left = $(this).scrollLeft();
+
+            $(".top").text(sc_top);
+            $(".left").text(sc_left);
+        });
+    </script>
+    <style>
+        body {
+            height: 10000px;
+            width: 5000px;
+        }
+
+        #wrap {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <p>scrollTop:<span class="top">0</span>px/p>
+            <p>scrollLeft:<span class="left">0</span>px/p>
+    </div>
+</body>
+
+</html>
