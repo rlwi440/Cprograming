@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(".memuwarp_1 a").on("click", function (e) {
+                e.preventDefault();
+
+                $(".memuwarp_1 a").css({
+                    "background-color": "#fff"
+                });
+
+                $(this).css({
+                    "background-color": "#ff0"
+                });
+            });
+
+            $(".memuwarp_2 a").on("click", function (e) {
+                e.preventDefault();
+
+                $(".memuwarp_2 a").css({
+                    "background-color": "#fff"
+                });
+
+                var idx = $(".menuwarp_2 a").index(this);
+
+
+                $(".memuwarp_2 a").ep(idx).css({
+                    "background-color": "#0ff"
+                });
+
+                $(".idxnum").text(idx);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h2>$(this)</h2>
+    <ul class="menuwarp_1">
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+    </ul>
+    <h2>index()</h2>
+    <ul class="menuwarp_2">
+        <li><a href="#">메뉴4</a></li>
+        <li><a href="#">메뉴5</a></li>
+        <li><a href="#">메뉴6</a></li>
+    </ul>
+    <p class="idxNum"></p>
+</body>
+
+</html>
