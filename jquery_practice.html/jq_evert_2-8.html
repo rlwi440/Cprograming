@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            $(".btn_1").on("mouseover", function () {
+                alert("HELLO");
+            });
+            $(document).on("mouseover", ".btn_2", function () {
+                alert("WELCOME!");
+            });
+            var btn_2 = $("<p><button class=\"btn_2\">버튼2</button></p>");
+            $("#wrap").append(btn_2);
+
+            $(".del_1").on("click", function () {
+                $(".btn_1").off("mouseover");
+            });
+            $(".del_1").on("click", function () {
+                $(".btn_1").off("mouseover");
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <p><button class="btn_1">버튼 1</button></p>
+    </div>
+    <p>
+        <button class="de1_1">버튼 1 이벤트 해제</button>
+        <button class="del_2">버튼 2 이벤트해제</button>
+    </p>
+</body>
+
+</html>
