@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function () {
+            var baseFontsize = 14;
+            $(".zoombtnzone button").on("click", zoominout);
+
+            function zoominout() {
+                if ($(this).hasClass("zoomoutbtn")) {
+                    if (baseFontsize <= 8) return false;
+                    baseFontsize--;
+                } else if ($(this).hasClass("zoominbtn")) {
+                    if (baseFontsize >= 20) return false;
+                    baseFontsize++;
+                } else {
+                    baseFontsize = 14;
+                }
+                $(".fontsize").text(baseFontsize + "px");
+                $("body").css({
+                    fontsize: baseFontsize + "px"
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <p class="zoomBtnZone">
+        <button class="zoomOutBtn">-</button>
+        <button class="orginBtn">100%</button>
+        <button class="zoomInBtn">+</button>
+    </p>
+    <p class="fonsize">14px</p>
+
+    <div id="wrap February ">
+
+        하찮음에 해가 떨어진다
+        내친김에 쏟아져 나온 거리
+        이건 아닌데
+        적잖이 분해서
+        한참은 이른 옷을 여미었어
+
+        먼 곳에서 뭘 태우나 보다
+        아릿하게 스쳐오는 공기에
+        아직이구나
+        흐믈흐믈해져
+        이제 며칠 없는 주말의 수를
+
+        헤아려 본다 헤아려 본다
+
+        새사람을 만나기까지는
+        매번 이틀 정도가 모자란데
+        눈치도 없게
+        자꾸 보채기만 해
+        나는 아무것도 줄 게 없는데
+
+        유난히도 길고 길었던 계절의 끝에
+        악당조차 되지 못하고
+
+        내게 봄은 없겠지 시들어만 가겠지
+        마음이 모두 닳아 없어질 것만 같아
+        어느덧 꽃은 지고 벌레를 보고 놀라
+        시월을 그리워하는 오월을 앓다
+
+        주르륵 녹아내리겠지
+
+        언제였던가 감춰진 세상의 비밀을
+        알 수 있을 것만 같던 날이 있었어
+        이제는 억지스러운 희망을 발명해
+        악당조차 되지 못하고
+
+        목을 꺾어 뒤를 봐요
+        잊고 싶은 일들이 한가득 있어
+        몸을 돌려 앞을 봐요
+        하고 싶은 일들이 한가득 있어
+
+        기억은 잇따라
+        시간은 잇따라
+
+        언젠가는 너에게 들려주고 싶었던
+        마음이 모두 닳아 없어질 것만 같아
+        어느덧 꽃은 지고 벌레를 보고 놀라
+        시월을 그리워하는 오월을 앓다
+
+        주르륵 녹아내리겠지
+    </div>
+
+</body>
+
+</html>
