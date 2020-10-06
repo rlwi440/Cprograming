@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"> </script>
+    <script>
+        $(function () {
+            $(".btn2").hide();
+
+            $(".btn1").on("click", function () {
+                $(".box").slideUp(1000, "linear", function () {
+                    $(".btn1").hide();
+                    $(".btn2").show();
+                });
+            });
+
+            $(".btn2").on("click", function () {
+                $(".box").fadeIn(1000, "swing", function () {
+                    $(".btn2").hide();
+                    $(".btn1").show();
+                });
+            });
+            $(".btn3").on("click", function () {
+                $(".box").slideToggle(1000, "linear");
+            });
+            $(".btn4").on("click", function () {
+                $(".box").fadeTo("fast", 0.3); //fade to (0.3)을 클릭하면 class값이 "box"인 요소가 70%w 투명해집니다.
+            });
+            $(".btn5").on("click", function () {
+                $(".box").fadeTo("fast,1");
+            });
+        });
+    </script>
+    <style>
+        .content {
+            width: 400px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <button class="btn1"> slideup</button>
+        <button class="bnt2">fadeIn</button>
+    </p>
+    <div class="box">
+        <div class="content">
+            짙은 보랏빛 새벽이
+            이 빛에 잠겨가고
+
+            눈물도 훔치지 않은 채
+            난 너의 눈만 보고 있어
+
+            아직 어둠은 차가운 채
+            날 둘러싸고 있어
+
+            너의 눈만 바라본 채
+            난 같은 말만 하고 있어
+
+            너의 날들이 날 떠나간대도
+            난 여기 이곳에 있겠지
+            너의 시간들만 움켜쥔 채로
+            나 이렇게
+
+            수많은 날들을 잊은 채
+            너에게 나를 맡겨왔어
+
+            그 시간들의 빛은 마치 화상처럼
+            내 가슴에 새겨져있어
+
+            너의 날들이 날 떠나간대도
+            난 여기 이곳에 있겠지
+            너의 시간들만 움켜쥔 채로
+            나 이렇게
+
+            너의 꿈들이 날 지워간대도
+            난 여기 이곳에 있겠지
+            너의 시간들만 움켜쥔 채로
+            나 이렇게
+
+            마치 모든 게 꿈인 것처럼
+            한순간 날 떠나간대도
+            기억이라는 끈에 매달린
+            인형처럼
+
+            너의 날들이 날 떠나간대도
+            난 여기 이곳에 있겠지
+            너의 시간들만 움켜쥔 채로
+            나 이렇게
+
+            너의 꿈들이 날 지워간대도
+            난 여기 이곳에 있겠지
+            너의 시간들만 움켜쥔 채로
+            나 이렇게
+
+            날 떠나간대도
+            난 이곳에 있겠지
+            날 지워간대도
+
+            눈물도 훔치지 않은 채
+            난 너의 눈만 보고 있어
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
