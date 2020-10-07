@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"> </script>
+    <script>
+        $(function () {
+            $(".btn1").on("click", function () {
+                $(".txt").animate({
+                        marginleft: "500 px",
+                        fontsize: "30px"
+                    },
+                    2000, "linear",
+                    function () {
+                        alert("모션완료");
+                    });
+            });
+
+            $(".btn2").on("click", function () {
+                $(".txt2").animate({
+                    marginleft: "+=50px"
+                }, 1000);
+            });
+        });
+    </script>
+    <style>
+        .txt1 {
+            background-color: aqua;
+        }
+
+        .txt2 {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <p><button class="btn1">버튼 1</button></p>
+    <span class="txt1">"5000px"이동</span>
+    <p><button class="btn2">버튼2</button></p>
+    <span class="txt2">"50px"씩 이동</span>
+</body>
+
+</html>
