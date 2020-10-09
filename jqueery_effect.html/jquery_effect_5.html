@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clearQueue</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"> </script>
+    <script>
+        $(function(){
+            $(".txt1")
+            .animate({marginLeft:"100px"},1000)
+            .animate({marginLeft:"300px"},1000)
+            .animate({marginLeft:"400px"},1000);
+            $(".txt2")
+            .animate({marginLeft:"100px"},1000)
+            .animate({marginLeft:"300px"},1000)
+            .animate({marginLeft:"400px"},1000);
+            $("txt2").clearQueue(); //현재 진행중인 애니메이션을 제외하고 대기중인 애니메이션은 모두 제거됩니다.
+        });
+    </script>
+    <style>
+        .txt1,txt2{width: 50px; text-align:center;
+        background-color: aqua;}
+        .txt2{background-color: orange;}
+    </style>
+</head>
+<body>
+<p class="txt1">내용1</p>
+<p class="txt2">내용2</p>
+</body>
+</html>
