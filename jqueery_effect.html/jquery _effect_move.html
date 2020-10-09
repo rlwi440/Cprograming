@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>move method</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"> </script>
+    <script>
+        $(function(){
+            var txt1 =$(".txt1");
+            var count=1;
+            $(".btnWrap buttoon").on("click",function(){
+                if(!txt1.is (":animated")){
+                    if($(this).hasClass("backbtn")){
+                        count--;
+                        if(count<1){                //스타일 속성값 
+                            count=1;
+                            return false;
+                        }
+                        txt1.animate({marginLeft:"-=10%"},300);
+                    }else{
+                        count++;
+                        if(count>10){
+                            count=10;
+                            return false;
+                        }
+                        txt1.animate({marginLeft:"+=10%"},300);
+                    }
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <p class="btnWrap">
+        <button class="back btn">back</button>
+        <button class="go btn">go </button>
+    </p>
+    <div class="wrap">
+        <p class="txt1"> 내용 1</p>
+    </div>
+    
+</body>
+</html>
