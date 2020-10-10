@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모두 책의 리뷰</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"> </script>
+    <script>
+
+function makeReview() {
+                // 1. 제목, 저자, 리뷰 내용을 가져옵니다.
+                let title = $("#title").val();
+                let author = $("#author").val();
+                let review = $("#bookReview").val();
+
+                // 2. 제목, 저자, 리뷰 중 하나라도 입력하지 않았을 경우 alert를 띄웁니다.
+                if (title == "") {
+                    alert("제목을 입력해주세요");
+                    $("#title").focus();
+                    return;
+                } else if (author == "") {
+                    alert("저자를 입력해주세요");
+                    $("#author").focus();
+                    return;
+                } else if (review == "") {
+                    alert("리뷰를 입력해주세요");
+                    $("#bookReview").focus();
+                    return;
+                }
+
+                // 3. POST /review 에 저장을 요청합니다.
+                $.ajax({
+                    type: "POST",
+                    url: "/review",
+                    data: {title_give: title, author_give: author, review_give: review},
+                    success: function (response) {
+                        if (response["result"] == "success") {
+                            alert(response["msg"]);
+                            window.location.reload();
+                        }
+                    }
+                })
+            }
+
+            function showReview() {
+                // 1. 리뷰 목록을 서버에 요청하기
+                $.ajax({
+                    type: "GET",
+                    url: "/review",
+                    data: {},
+                    success: function (response) {
+                        // 2. 요청 성공 여부 확인하기
+                        if (response["result"] == "success") {
+                            let reviews = response["reviews"];
+                            // 3. 요청 성공했을 때 리뷰를 올바르게 화면에 나타내기
+                            for (let i = 0; i < reviews.length; i++) {
+                                makeCard(reviews[i]["title"], reviews[i]["author"], reviews[i]["review"]);
+                            }
+                        } else {
+                            alert("리뷰를 받아오지 못했습니다");
+                        }
+                    }
+                })
+            }
+
+            function makeCard(title, author, review) {
+                let tempHtml = `<tr>
+                        <td>${title}</td>
+                        <td>${author}</td>
+                        <td>${review}</td>
+                    </tr>`;
+                $("#reviews-box").append(tempHtml);
+            }
+
+            function validateLength(obj) {
+                let content = $(obj).val();
+                if (content.length > 140) {
+                    alert("리뷰는 140자까지 기록할 수 있습니다.");
+                    $(obj).val(content.substring(0, content.length - 1));
+                }
+            }
+        </script>
+        <style>
+
+        </style>
+</head>
+<body>
+    body>
+        <div class="container">
+            <img src="https://previews.123rf.com/images/maxxyustas/maxxyustas1511/maxxyustas151100002/47858355-education-concept-books-and-textbooks-on-the-bookshelf-3d.jpg"
+                 class="img-fluid" alt="Responsive image">
+            <div class="info">
+                <h1>읽은 책에 대해 말씀해주세요.</h1>
+                <p>다른 사람을 위해 리뷰를 남겨주세요! 다 같이 좋은 책을 읽는다면 다 함께 행복해질 수 있지 않을까요?</p>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">제목</span>
+                    </div>
+                    <input type="text" class="form-control" id="title">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">저자</span>
+                    </div>
+                    <input type="text" class="form-control" id="author">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">리뷰</span>
+                    </div>
+                    <textarea class="form-control" id="bookReview"
+                              cols="30"
+                              rows="5" placeholder="140자까지 입력할 수 있습니다." onkeyup="validateLength(this)"></textarea>
+                </div>
+                <div class="review">
+                    <button onclick="makeReview()" type="button" class="btn btn-primary">리뷰 작성하기</button>
+                </div>
+            </div>
+            <div class="reviews">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">제목</th>
+                        <th scope="col">저자</th>
+                        <th scope="col">리뷰</th>
+                    </tr>
+                </thead>
+                </table>
+            </div>
+        </div>
+    </body>
+
+</body>
+</html>
