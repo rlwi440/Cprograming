@@ -19,7 +19,7 @@
                     data:myData,
                     success:function(res){
                         if(res){
-                            var jsonData =JSON.parse(res);
+                            var jsonData =JSON.parse(res);      
                             var messeag =jsonData.user_name+
                             "("+ jsonData.user_id +")"+"님 반갑습니다";
                             $(".login_wrap").html(messeag);
