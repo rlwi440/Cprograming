@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery datepicker</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"> </script>
+    <script src="C:\Users\rlwi4\Downloads\jquery-ui-1.12.1.custom\jquery-ui-1.12.1.custom\jquery-ui.js"></script>
+    <link rel="styleshhet" href="css/jquery-ui-1-min.css">
+    <script>
+        $(function(){
+            $("#starDate").datepicker({
+                minDate:+1,
+                maxDate: "+1M"
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>
+        <label for="startDate">날짜선택</label>
+        <input type="text" name="startDate" id="startDate">
+    </p>
+    
+</body>
+</html>
