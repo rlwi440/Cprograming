@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"> </script>
+    <script src="js/jqurey.cookie.js"> </script>
+    <script>
+        $(function(){
+            if($.cookie("popup")=="none"){
+                $("#notice_wrap").hide();
+            }
+
+            var $expchk=$("#expireschk");
+            $(".closeBtn").on("click",closepop);
+
+            function closepop(){
+                if($expchk.is(":checked")){
+                    $.cookie("popup","none",{expires:3,path:"/"});
+                }
+                $("#notice_wrap").fadeOut("fast");
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="notice_wrap">
+        <img src="‪‪‪‪‪‪‪C:\Users\rlwi4\Desktop\Dobby_1.jpg" alt="DObby is free">
+        <p class="closewrap">
+            <input type="checkbox" name="expires chk" id="expires chk" >
+            <label for="expires chk">오늘도 피곤하다</label>
+            <button class="closeBtn">퇴근</button>
+        </p>
+    </div>
+</body>
+</html>
