@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="js/jquery.js"> </script>
+    <script>
+        $(function(){
+            $('.slide_gallery').bxslider({
+                auto:true,
+                autoControls:false,
+                pagerCustom:'.slider-pager'
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="gallery_wrap">
+        <ul class="slide_gallery">
+            <li><img src="‪C:\Users\rlwi4\Desktop\images\pic_1.jpg" alt="사진1"></li>
+            <li><img src="‪C:\Users\rlwi4\Desktop\images\pic_2jpg" alt ="사진2"> </li>
+            <li><img src="‪C:\Users\rlwi4\Desktop\images\pic_3.jpg" alt="사진3"></li>
+            <li><img src="‪C:\Users\rlwi4\Desktop\images\pic_4.jpg" alt="사진4"></li>
+            <li><img src="‪C:\Users\rlwi4\Desktop\images\pic_5.jpg" alt="사진5"> </li>
+        </ul>
+        <ul class="slider-pager">
+            <li><a href="#" data-slide-index="0">
+                <img src="‪C:\Users\rlwi4\Desktop\images\pic_1.jpg" alt="사진1">
+            </a></li>
+            <li><a href="#" data-slide-index="1">
+                <img src="‪C:\Users\rlwi4\Desktop\images\pic_2.jpg" alt="사진2">
+            </a></li>
+            <li><a href="#" data-slide-index="3">
+                <img src="‪C:\Users\rlwi4\Desktop\images\pic_3.jpg" alt="사진3">
+                <li><a href="#" data-slide-index="4">
+                    <img src="‪C:\Users\rlwi4\Desktop\images\pic_4.jpg" alt="사진4">
+                    <li><a href="#" data-slide-index="5">
+                        <img src="‪C:\Users\rlwi4\Desktop\images\pic_5.jpg" alt="사진5">
+                    </a></li>
+                </a></li>
+            </a></li>
+        </ul>
+</body>
+</html>
